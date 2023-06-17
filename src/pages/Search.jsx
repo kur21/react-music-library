@@ -39,7 +39,7 @@ const Search = () => {
         <h5 className='font-semibold text-xl text-white text-left mb-4'>Artists:</h5>   
         <div className="flex flex-wrap sm:justify-start justify-center gap-8">
           {artists ? artists?.map((track) => (
-            <ArtistCard key={track.key} track={track}/>
+            <ArtistCard key={track.adamid} track={track}/>
           )) : <p className='text-gray-400 text-left'>No matching artist</p>}
         </div>
       </div>
