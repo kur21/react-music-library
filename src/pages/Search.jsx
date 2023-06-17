@@ -17,10 +17,10 @@ const Search = () => {
 
 	return (
 		<div className="flex flex-col">
-			<h2 className="font-bold text-3xl text-white text-left mt-4 mb-10">Showing results for <span className='font-black'>{searchTerm}</span></h2>
+			<h2 className="font-bold text-3xl text-white text-center sm:text-left mt-4 mb-10">Showing results for <span className='font-black'>{searchTerm}</span></h2>
 
       <div className='mb-8'>
-        <h5 className='font-semibold text-xl text-white text-left mb-4'>Songs:</h5>
+        <h5 className='font-semibold text-xl text-white text-center sm:text-left mb-4'>Songs:</h5>
         <div className="flex flex-wrap sm:justify-start justify-center gap-8">
           {songs ? songs?.map((song, i) => (
             <SongCard
@@ -31,16 +31,16 @@ const Search = () => {
               data={data.tracks}
               i={i}
             />
-          )) : <p className='text-gray-400 text-left'>No matching song</p>}
+          )) : <p className='text-gray-400 text-center sm:text-left'>No matching song</p>}
         </div>
       </div>
 
       <div>
-        <h5 className='font-semibold text-xl text-white text-left mb-4'>Artists:</h5>   
+        <h5 className='font-semibold text-xl text-white text-center sm:text-left mb-4'>Artists:</h5>   
         <div className="flex flex-wrap sm:justify-start justify-center gap-8">
           {artists ? artists?.map((track) => (
             <ArtistCard key={track.adamid} track={track}/>
-          )) : <p className='text-gray-400 text-left'>No matching artist</p>}
+          )) : <p className='text-gray-400 text-center sm:text-left'>No matching artist</p>}
         </div>
       </div>
 		</div>
